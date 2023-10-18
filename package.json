@@ -10,16 +10,25 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "xjln",
-      "aliases": ["XJLN", "xjln"],
-      "extensions": [".xjln"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "xjln",
-      "scopeName": "source.xjlnGrammar",
-      "path": "./syntaxes/xjln.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "xjln",
+        "aliases": [
+          "XJLN",
+          "xjln"
+        ],
+        "extensions": [
+          ".xjln"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "xjln",
+        "scopeName": "source.xjln",
+        "path": "./syntaxes/xjln.tmLanguage.json"
+      }
+    ]
   }
 }

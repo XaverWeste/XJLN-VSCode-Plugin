@@ -1,32 +1,50 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "XJLN",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#keyword"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#char"
+		},
+		{
+			"include": "#number"
+		},
+		{
+			"include": "#operator"
+		},
+		{
+			"include": "#identifier"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.xjln",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+		"keyword": {
+			"name": "keyword.xjln",
+			"match": "use|from|as|return|if|else|var|int|double|long|short|float|boolean|byte|char|def|class"
 		},
 		"strings": {
-			"name": "string.quoted.double.xjln",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.xjln",
-					"match": "\\\\."
-				}
-			]
+			"name": "string.xjln",
+			"match": "\".*\""
+		},
+		"char": {
+			"name": "char.xjln",
+			"match": "'.'"
+		},
+		"number": {
+			"name": "number.xjln",
+			"match": "[0-9]+(\\.[0-9]+)?"
+		},
+		"operator": {
+			"name": "operator.xjln",
+			"match": "[-\\+\\*/%&\\|<>=!\\^]+"
+		},
+		"identifier": {
+			"name": "identifier.xjln",
+			"match": "[a-zA-Z][a-zA-Z0-9_]*"
 		}
 	},
-	"scopeName": "source.xjlnGrammar"
+	"scopeName": "source.xjln"
 }
