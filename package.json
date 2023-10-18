@@ -1,0 +1,25 @@
+{
+  "name": "xjln",
+  "displayName": "XJLN",
+  "description": "XJLN Language Support",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "xjln",
+      "aliases": ["XJLN", "xjln"],
+      "extensions": [".xjln"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "xjln",
+      "scopeName": "source.xjlnGrammar",
+      "path": "./syntaxes/xjln.tmLanguage.json"
+    }]
+  }
+}
