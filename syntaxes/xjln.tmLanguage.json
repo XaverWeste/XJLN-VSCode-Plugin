@@ -15,15 +15,16 @@
 		},
 		{
 			"include": "#operator"
-		},
-		{
-			"include": "#identifier"
 		}
 	],
 	"repository": {
+		"comment": {
+			"name": "comment.xjln",
+			"match": "#[^\n]*"
+		},
 		"keyword": {
 			"name": "keyword.xjln",
-			"match": "use|from|as|return|if|else|var|int|double|long|short|float|boolean|byte|char|def|class"
+			"match": "use|from|as|return|if|else|while|var|int|double|long|short|float|boolean|byte|char|true|false|def|class"
 		},
 		"strings": {
 			"name": "string.xjln",
@@ -35,15 +36,11 @@
 		},
 		"number": {
 			"name": "number.xjln",
-			"match": "[0-9]+(\\.[0-9]+)?"
+			"match": "[0-9]+(.[0-9]+)?"
 		},
 		"operator": {
 			"name": "operator.xjln",
-			"match": "[-\\+\\*/%&\\|<>=!\\^]+"
-		},
-		"identifier": {
-			"name": "identifier.xjln",
-			"match": "[a-zA-Z][a-zA-Z0-9_]*"
+			"match": "[-+*/%&|<>=!^]+"
 		}
 	},
 	"scopeName": "source.xjln"
